@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		{% block head %}
+		<title>{% block title %}HandMade Beauty{% endblock %}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script></head>
+		<style>           
+
+				.jumbotron {
+					background: -webkit-radial-gradient(center, circle farthest-corner, rgb(243, 164, 144) 50%, rgb(214, 184, 179)), -webkit-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
+				}
+
+				.navbar {
+					margin-bottom: 50px;
+					border-radius: 0;
+				}
+
+				 body {
+					font: 20px Montserrat, sans-serif;
+					line-height: 1.8;
+					background: #e8eae8;
+				 }
+
+				footer {
+					background-color: #343a40;
+					color: white;
+					padding: 15px;
+					margin-bottom: 0px;
+					margin-top:15px;
+				}
+				.sidenav {
+					padding-top: 20px;
+					background-color: #f1f1f1;
+					height: 100%;
+				}
+
+				.row.content {
+					height:auto;
+				}
+
+				panel.footer {
+					background-color: #f2f2f2;
+					padding: 25px;
+				}
+
+				.card-header{
+					background-color: #EBE8E7;
+				}
+
+				.img-responsive{
+					height: 250px;
+				}
+
+				.carousel .carousel-item {
+					height: 450px;
+				}
+
+				.carousel-item img {
+					position: absolute center;
+					object-fit:fill;
+					width:100%;
+					height:500px;
+					margin-top: 0px;
+					border-radius: 50%;
+				}
+
+
+		</style>
+		{% endblock %}
+</head>
+		<body>
+		{% block header %}
+
+		 <div class="jumbotron text-center" style="margin-bottom:0">
+				<h1>HandMade Beauty</h1>
+				<p>Your skin, Your choice</p>
+		 </div>
+		{% endblock %}
+
+		 {% block navbar %}
+			<nav class="navbar navbar-expand-md bg-dark navbar-dark" >
+				<a class="navbar-brand" href="/">Welcome</a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link " href="/product">Our Products</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/about_us">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		 {% endblock %}
+
+		{% block content %}
+
+		<div class="container-fluid text-center">
+	<div class="row content">
+		
+		<div class="col text-left" >
+			<h1>Welcome</h1>
+			<br>
+			<p> HandMade Beauty is a beauty business that has at heart your skin needs. Our mission is to work along side you to present you handmade and organic products that will upgrade your skin routine to the next level!   </p>
+		</div>
+
+
+		<div id="demo" class="carousel slide col" data-ride="carousel">
+
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+			</ul>
+
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+						<img src="/static/makeup_picture_1.jpeg" alt="Makeup Image">
+						<div class="carousel-caption">
+							<h3> Our Grand Opening  </h3>
+							<p> Stay tuned for more information !</p>
+						</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container-fluid">
+						<img src="/static/lipstick_carousel_picture.jpeg" alt="Lipstick Image">
+						<div class="carousel-caption">
+							<h3> Newsletters Subscription </h3>
+							<p> Subscribe to our Newsletter for monthly deals ! </p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container-fluid">
+						<img src="/static/sale_picture.jpeg" alt="Sales Image">
+						<div class="carousel-caption">
+							<h3> Sales  </h3>
+							<p> Incoming sales on our products </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+
+		</div>
+		
+	</div>
+</div>
+		
+		
+		
+		{% endblock %}
+
+{% block footer %}
+<footer class="container-fluid text-center">
+	<p>© 2019 HandMade Beauty Canada, Inc. All rights reserved.</p>
+</footer>
+{% endblock %}
+
+</body>
+</html>
